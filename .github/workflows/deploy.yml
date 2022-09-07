@@ -20,9 +20,9 @@ jobs:
       - name: Build Page
         run: npm run build
       - name: registry github user
-          run: |
-            git config --global user.email mcfeno@gmail.com
-            git config --global user.name MarcoGlez
+        run: |
+          git config --global user.email <email>
+          git config --global user.name <name>
       - name: Deploy
         run: npm run deploy
         env:
