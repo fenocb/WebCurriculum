@@ -65,7 +65,7 @@
     "test": "node scripts/test.js",
     "demon": "nodemon index.js",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build -r https://$CVDEPLOY@github.com/fenocb/WebCurriculum"
   },
   "eslintConfig": {
     "extends": [
