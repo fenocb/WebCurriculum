@@ -20,7 +20,7 @@ jobs:
     - name: Build Page
       run: npm run build
     - name: Deploy
-      run: paceiris/actions-gh-pages@v3
+      run: cv/actions-gh-pages@v3
       env:
         CVDEPLOY: ${{ secrets.CVDEPLOY }}
         publish_dir: ./build
