@@ -2,7 +2,7 @@
   "name": "cv",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://fenocb.github.io/WebCurriculum/",
+  "homepage": "http://fenocb.github.io/WebCurriculum/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
@@ -20,7 +20,7 @@
     "eject": "react-scripts eject",
     "demon": "nodemon index.js",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build -r https://$CVDEPLOY@github.com/fenocb/cv/"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
