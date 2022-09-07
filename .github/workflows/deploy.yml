@@ -12,12 +12,15 @@ jobs:
     node-version: [ "12.x" ]
   steps:
     - uses: actions/checkout@v2
-    - uses: actions/setup-node@v1 
+    - uses: actions/setup-node@v2
       with:
         node-version: ${{matrix.node-version}}
     - name: install packages
       run: npm install
-    - name: deploy the app
-      run: npm deploy
-      env:
+    - name: Build Page
+      run: npm run build
+    - name: Deploy
+      run: paceiris/actions-gh-pages@3
+      with:
           CVDEPLOY: ${{ secrets.CVDEPLOY }}
+          publish_dir: ./build
