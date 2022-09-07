@@ -9,8 +9,8 @@ module.exports = {
       },
       colors: {
         Cian: "#5AF6FF",
-        Background_one: "#030022",
-        Background_two: "#320967",
+        Background_one: "#1a1a26",
+        Background_two: "#060409",
         PurpleNumbre: "#5E00D6"
       },
     },

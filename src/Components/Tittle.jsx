@@ -2,7 +2,7 @@ import { React } from "react";
 
 const Tittle = ({ title }) => {
   return (
-    <div className="w-screen flex justify-center ">
+    <div className="flex justify-center w-full">
       <p className="font-Righteous text-Cian text-9xl font-semibold drop-shadow-xl">
         {title}
       </p>

@@ -1,10 +1,10 @@
 import { React } from "react";
 
-const ProjectCard = ({width, title, number, imageSrc, paddinLeft,}) => {
-    let classContainer = " pt-16 hover:z-50 " + width + " " + paddinLeft;
+const ProjectCard = ({ width, title, number, imageSrc, paddinLeft }) => {
+  let classContainer = " pt-16 hover:z-50 " + width + " " + paddinLeft;
   return (
     <div className={classContainer}>
-      <div className="backdrop-blur-xl  backdrop-brightness-150 drop-shadow-sm transition ease-in-out  hover:backdrop-saturate-150 hover:scale-110 duration-300 ">
+      <div className="backdrop-blur-xl  backdrop-brightness-150 drop-shadow-sm  transition ease-in-out font-light hover:font-semibold  hover:backdrop-saturate-120 hover:scale-110 duration-300 cursor-pointer">
         <div className="h-72">
           <img
             src={imageSrc}
@@ -15,11 +15,11 @@ const ProjectCard = ({width, title, number, imageSrc, paddinLeft,}) => {
         <div className="border-b border-gray-600">
           <div className="flex flex-row">
             <p className="p-10 bg-PurpleNumbre">01</p>
-            <p className="pt-10 pl-10">Titulo de proyecto</p>
+            <p className="pt-8 pl-10 text-4xl	">Titulo de proyecto</p>
           </div>
         </div>
         <div>
-          <p className="p-6">
+          <p className="p-6 drop-shadow-lg">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis
             nisi officia earum deleniti porro expedita quisquam veritatis illum
             eligendi. Eaque aliquid laudantium saepe quae porro labore
@@ -40,6 +40,9 @@ const ProjectCard = ({width, title, number, imageSrc, paddinLeft,}) => {
             inventore? Ipsum, error! Velit porro voluptatem corporis pariatur
             similique
           </p>
+        </div>
+        <div className="border-t border-gray-800">
+          <p className="text-end pr-4 py-1 text-gray-400">Ver más -></p>
         </div>
       </div>
     </div>
