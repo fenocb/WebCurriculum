@@ -1,26 +1,30 @@
 name: Deploy react app
 on:
- push: 
-   branches:
-     - master
+  push:
+    branches:
+      - master
 jobs:
- deploy:
-  name: deploy app
-  runs-on: ubuntu-latest
-  strategy:
-   matrix:
-    node-version: [ "12.x" ]
-  steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v2
-      with:
-        node-version: ${{matrix.node-version}}
-    - name: install packages
-      run: npm install
-    - name: Build Page
-      run: npm run build
-    - name: Deploy
-      run: npm run deploy
-      env:
-        CVDEPLOY: ${{ secrets.CVDEPLOY }}
-        publish_dir: ./build
+  deploy:
+    name: deploy app
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: ["12.x"]
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: ${{matrix.node-version}}
+      - name: install packages
+        run: npm install
+      - name: Build Page
+        run: npm run build
+      - name: registry github user
+          run: |
+            git config --global user.email mcfeno@gmail.com
+            git config --global user.name MarcoGlez
+      - name: Deploy
+        run: npm run deploy
+        env:
+          CVDEPLOY: ${{ secrets.CVDEPLOY }}
+          publish_dir: ./build
