@@ -22,5 +22,5 @@ jobs:
     - name: Deploy
       run: paceiris/actions-gh-pages@v3
       with:
-          CVDEPLOY: ${{ secrets.CVDEPLOY }}
+          GITHUB_TOKEN: ${{ secrets.CVDEPLOY }}
           publish_dir: ./build
